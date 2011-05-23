@@ -59,7 +59,7 @@ public class JWhich {
 
         while (!argQueue.isEmpty() && argQueue.peek().startsWith("-")) {
             arg = argQueue.poll();
-            if ("-help".equals(arg) || "-h".equals(arg)) {
+            if ("--help".equals(arg) || "-h".equals(arg)) {
                 printUsage();
             } else if ("-v".equals(arg) || "--verbose".equals(arg)) {
                 log.setLevel(Level.FINE);
@@ -68,6 +68,7 @@ public class JWhich {
                 regExpFlags |= Pattern.CASE_INSENSITIVE;
             } else {
                 System.err.println("Error: Unknown option " + arg);
+                System.exit(1);
             }
         }
 
