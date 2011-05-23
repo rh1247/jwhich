@@ -166,7 +166,8 @@ public class JWhich {
 
     private static void printUsage() {
 
-        System.out.println("\nJWhich [options] <class_name_pattern> [<search_path>]");
+        System.out.println();
+        System.out.println("jwhich [options] <class_name_pattern> [<search_path>]");
         System.out.println();
         System.out.println(" Search a class in directories, zip or jar files");
         System.out.println();
@@ -181,7 +182,7 @@ public class JWhich {
         System.out.println("   --help|-h               print this usage");
         System.out.println();
         System.out.println("Examples:");
-        System.out.println("   JWhich 'java.lang.*' $JAVA_HOME/lib/rt.jar");
+        System.out.println("   jwhich 'java.lang.*' $JAVA_HOME/lib/rt.jar");
         System.out.println();
         System.exit(0);
     }
