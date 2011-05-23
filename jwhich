@@ -23,4 +23,4 @@ fi
 # Absolute path this script is in. /home/user/bin
 BASEDIR=`dirname $SCRIPT`
 
-java -jar $BASEDIR/dist/JWhich.jar $*
+java -jar $BASEDIR/JWhich.jar $*
