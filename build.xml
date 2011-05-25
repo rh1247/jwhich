@@ -11,15 +11,20 @@
     <description>Builds, tests, and runs the project JWhich.</description>
     <import file="nbproject/build-impl.xml"/>
 
+    <target name="-pre-init">
+        <property name="jwhich.version" value="1.01"/>
+    </target>
+
     <target name="-post-jar">
 
-        <zip destfile="dist/jwhich-1.0.zip">
+        <zip destfile="dist/jwhich-${jwhich.version}.zip">
             <fileset dir="." includes="jwhich"/>
             <fileset dir="dist">
                 <include name="*.jar"/>
             </fileset>
         </zip>
-        <zip destfile="dist/jwhich_src-1.0.zip">
+        
+        <zip destfile="dist/jwhich_src-${jwhich.version}.zip">
             <fileset dir=".">
                 <include name="src/**/*"/>
                 <include name="nbproject/project.xml"/>
