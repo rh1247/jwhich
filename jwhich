@@ -14,9 +14,8 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 #  under the License.
-
 if [ -L $0 ]; then
-   SCRIPT=$(readlink $0)
+   SCRIPT=`ls -l $0 | sed 's/^.*-> //'`
 else
    SCRIPT=$0
 fi

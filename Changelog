@@ -1,0 +1,10 @@
+
+Version 1.0.1
+=============
+
+Issues #1 fixed: jwhich script does not work under Solaris (missing readlink)
+
+Version 1.0
+===========
+
+Initial version
